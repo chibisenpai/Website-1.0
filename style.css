@@ -1,114 +1,74 @@
-* {
-    box-sizing: border-box;
+ /* *Imports */
+ @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600&display=swap');
 
-    margin: 0;
-    padding: 0;
-    background: rgb(0,0,0);
-   
+/* *general */
+
+* {
+ margin: 0;
+ padding: 0;
+
+}
+ 
+body {
+ font-family: 'Source Code Pro', monospace;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+p {
+    color: rgb(0, 0, 0);
+}
+
+
+
+/* TODO:Transition */
+
+a, .btn {
+transition: all 300ms ease;
+}
+
+
+/* *Desktop Nav (COMPLETED) */
+
+nav,
+.nav-links {
+    display:flex;
     
 }
-li, a, button {
-    font-family: monospace;
-    font-weight: 500;
-    font-size: 16px;
-    color: white;
-    text-decoration: none;
+
+nav {
+    justify-content:space-around ;
+    align-items: center;
+    height: 17vh;
 }
 
-header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 30px 10%;
+.nav-links {
+    gap:2rem;
+    list-style: none;
+    font-size: 1.5rem
+}
+
+
+a  {
+    color:black;
+    text-decoration: none;
+    text-decoration-color: none;
+
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-decoration-color:rgb(181, 181, 181);
 }
 
 .logo {
-    cursor: pointer;
-    margin-right: auto;
+    font-size: 2rem;
 }
 
-.nav_link {
-    list-style: none;
-
+.logo:hover {
+    cursor: default;
 }
-
-.nav_links li {
-    display: inline-block;
-    padding: 0px 20px;
-
-}
-
-.nav_links li a {
-    transition: all 0.3s ease 0s;
-
-}
-
-.nav_links li a:hover {
-    
-    color: rgba(175, 84, 255);
-    
-}
-
-/* Add an active class to highlight the current page */
-.nav_links li a:active {
-    color: rgba(175, 84, 255);
-}
-
-
-button {
-    padding: 9px 25px;
-    border-color: rgba(175, 84, 255);
-    border: 100;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-    margin-left: 20px;
-    
-    
-}
-
-button:hover {
-    background-color: rgba(175, 84, 255, 1)
-}
-
-/* * hero page */
-
-.main-intro h1 , p {
-    color: white;
-    
-}
-
-
-
-
-
-/* *MOBILE FRIENDLY VIEW */
-
-
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-    .logo {
-        margin-bottom: 20px;
-    }
-
-    .nav_links.active {
-        position: static;
-        background-color: transparent;
-        width: auto;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .nav_links li {
-        padding: 0 15px;
-    }
-
-    button {
-        margin: 10px 0;
-        align-items: center;
-    }
-
