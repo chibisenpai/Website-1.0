@@ -431,3 +431,13 @@ section {
   height: 2.5rem;
 }
 
+/* footer */
+
+footer {
+  height:26 vh;
+  margin: 0 1rem;
+}
+
+footer p{
+  text-align: center;
+}
